@@ -6,7 +6,7 @@ model_fraud = pickle.load(open('model_deteksi_komentar.sav','rb'))
 
 tfidf = TfidfVectorizer
 
-loaded_vec = TfidfVectorizer(decode_error="replace", vocabulary=set(pickle.load(open("new_selected_feature_tf-idf.sav", "rb"))))
+loaded_vec = TfidfVectorizer(decode_error="replace", vocabulary=set(pickle.load(open("model_deteksi_komentar.sav", "rb"))))
 st.set_page_config(
     page_title="Deteksi Komentar Hate Speech Pada Instagram",
     page_icon=":star:",
